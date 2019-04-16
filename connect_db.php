@@ -4,5 +4,5 @@ OR die (mysqli_connect_error());
 mysqli_set_charset($connect, 'utf-8');
 
 if (!mysqli_ping($connect)) {
-	echo 'Ошибка соеденения';
+	echo 'Ошибка соединения';
 }
