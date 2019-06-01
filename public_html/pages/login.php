@@ -32,10 +32,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 ?>
-<?php 
-ob_start(); 
-session_start(); 
-session_set_cache_limiter('public'); // <== Call this between 
-session_start() and session_regenerate_id() 
-session_regenerate_id(); 
-?>
