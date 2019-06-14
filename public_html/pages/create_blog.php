@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$sql = "SELECT LAST_INSERT_ID()";
 			$query = mysqli_query($connect, $sql);
 			$blogId = mysqli_fetch_assoc($query);
-			header('Location: blog.php?blog_id='.$blogId['LAST_INSERT_ID()'].'');
+			header('Location: create_post.php?blog_id='.$blogId['LAST_INSERT_ID()'].'');
 		}
 
 	}
