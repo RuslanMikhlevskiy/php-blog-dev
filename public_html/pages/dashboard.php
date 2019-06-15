@@ -1,13 +1,13 @@
 <?php session_start();?>
 <?php 
 if (isset($_SESSION['USER'])) {
-	$user = $_SESSION['USER'][0]['login'];
+	$user = $_SESSION['USER']['login'];
 	echo "<h1>Привет $user</h1>";
 }
 ?>
 <?php require ('../connect_db.php');//Коннектимся к бд ?>
 <?php
-$userId = $_SESSION['USER'][0]['id'];
+$userId = $_SESSION['USER']['id'];
 $sql = "SELECT * from blogs WHERE owner_id = $userId";
 
 $result = mysqli_query($connect, $sql);
