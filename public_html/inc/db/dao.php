@@ -22,4 +22,8 @@ function findUserByLoginAndPassword(string $login, string $password) {
   return $userInfo;
 }
 
+function createUser(string $login, string $password, string $firstName, string $lastName) {
+  // TODO: move interaction with DB from signup.php into here
+}
+
 ?>
