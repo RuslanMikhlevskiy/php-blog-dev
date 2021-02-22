@@ -3,7 +3,7 @@
 <?php
 //Проверяем включена ли сессия
 if (isset($_SESSION['USER'])) {
-	$user = $_SESSION['USER'][0]['login'];
+	$user = $_SESSION['USER']['login'];
 	echo "<h1>Привет $user</h1>";
 } else {
 	echo "Сессия не активна";

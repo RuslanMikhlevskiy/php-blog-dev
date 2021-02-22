@@ -3,7 +3,7 @@
 <?php
 //Проверяем включена ли сессия
 if (isset($_SESSION['USER'])) {
-	$user = $_SESSION['USER'][0]['login'];
+	$user = $_SESSION['USER']['login'];
 	echo "<h1>Привет $user</h1>";
 } else {
 	header('Location: login.php');
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		//Описание блога
 		$description = $_POST['description'];
 		//Id юзера из сессии
-		$userId = $_SESSION['USER'][0]['id'];
+		$userId = $_SESSION['USER']['id'];
 		//Запрос на добавление блога
 		$insert = "INSERT INTO blogs(name,description,created_date,owner_id) values('$name','$description',now(),$userId)";
 		//Запрос на выборку из таблицы
